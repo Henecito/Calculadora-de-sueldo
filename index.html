@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <title>Calculadora de Sueldo</title>
+    <link rel="icon" href="assets/img/favicon.ico" type="ico">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="navbar-title"></h1>
+        </nav>
+    </header>
+    <h1>Calculadora de Sueldo</h1>
+  <div class="container-primary">
+    <div id="calculator" class="calculator-container">
+        <div class="input-item">
+            <label for="hourlyRate">Tarifa por hora:</label>
+            <input type="number" id="hourlyRate" placeholder="Ingrese la tarifa por hora">
+        </div>
+        <div class="input-item">
+            <label for="regularHours">Horas regulares:</label>
+            <input type="number" id="regularHours" placeholder="Ingrese las horas regulares">
+        </div>
+        <div class="input-item">
+            <label for="overtime50Hours">Horas extras al 50%:</label>
+            <input type="number" id="overtime50Hours" placeholder="Ingrese las horas extras al 50%">
+        </div>
+        <div class="input-item">
+            <label for="overtime100Hours">Horas extras al 100% (feriado):</label>
+            <input type="number" id="overtime100Hours" placeholder="Ingrese las horas extras al 100% (feriado)">
+        </div>
+        <div class="input-item">
+            <label for="bonus">Gratificación (%):</label>
+            <input type="number" id="bonus" placeholder="Ingrese el porcentaje de gratificación">
+        </div>
+        <div class="input-item">
+            <label for="afpDiscount">Descuento de AFP (%):</label>
+            <input type="number" id="afpDiscount" placeholder="Ingrese el porcentaje de descuento de AFP">
+        </div>
+        <div class="input-item">
+            <label for="afpDiscountEnabled">Habilitar descuento de AFP:</label>
+            <input type="checkbox" id="afpDiscountEnabled">
+        </div>
+        <div class="input-item">
+            <label for="healthDiscount">Descuento de Salud:</label>
+            <input type="checkbox" id="healthDiscount">
+        </div>
+        <div class="input-item">
+            <label for="cesantiaDiscount">Descuento de Seguro de Cesantía:</label>
+            <input type="checkbox" id="cesantiaDiscount">
+        </div>
+        <button onclick="calculateSalary()">Calcular Sueldo</button>
+    </div>
+
+    <div id="result" class="result-container">
+      <div class="x" id="closeResult">
+        <img class="x-img" src="assets/img/x.png" alt="x">
+        <span id="x"></span>
+      </div>
+        <div class="result-item">
+            <p class="result-label">Salario Regular:</p>
+            <span id="regularPayResult" class="result-value"></span>
+        </div>
+        <div class="result-item">
+            <p class="result-label">Salario Horas Extras al 50%:</p>
+            <span id="overtime50PayResult" class="result-value"></span>
+        </div>
+        <div class="result-item">
+            <p class="result-label">Salario Horas Extras al 100% (Feriado):</p>
+            <span id="overtime100PayResult" class="result-value"></span>
+        </div>
+        <div class="result-item">
+            <p class="result-label">Gratificación:</p>
+            <span id="bonusAmount" class="result-value"></span>
+        </div>
+        <div class="result-item">
+            <p class="result-label">Total Descuento:</p>
+            <span id="totalDiscount" class="result-value"></span>
+        </div>
+        <div class="result-item">
+            <p class="result-label">Total Salario:</p>
+            <span id="totalPayResult" class="result-value"></span>
+        </div>
+    </div>
+  </div>
+  <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <p>Los resultados pueden no ser precisos, pero se acercan a lo que deberías recibir mensualmente.</p>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+      <footer class="footer">
+        <a class="link" href="https://www.instagram.com/stdi_solutions/" target="_blank">&copy; 2023 STDI Solutions</a>
+      </footer>
+</html>
